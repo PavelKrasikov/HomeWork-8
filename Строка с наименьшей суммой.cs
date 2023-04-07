@@ -34,6 +34,16 @@ void PrintArr(int[,] arr)
     }
 }
 
+int sumRow(int[,] arr, int i)
+{
+  int sum = arr[i, 0];
+  for (int j = 1; j < arr.GetLength(1); j++)
+  {
+    sum = sum + arr[i, j];
+  }
+  return sum;
+}
+
 int minSum (int[,] array)
 {
     int minRow = 1;
@@ -47,16 +57,6 @@ int minSum (int[,] array)
          }
     }
     return minRow;
-}
-
-int sumRow(int[,] arr, int i)
-{
-  int sum = arr[i, 0];
-  for (int j = 1; j < arr.GetLength(1); j++)
-  {
-    sum = sum + arr[i, j];
-  }
-  return sum;
 }
 
 int[,] Massive = new int[6, 5];
